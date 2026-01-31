@@ -34,7 +34,8 @@ Paste the text and get a clean result instantly.
 ---
 
 ## Chrome Web Store
-The extension is available on the Chrome Web Store:  
+Available in Chrome Web Store:
 https://chromewebstore.google.com/detail/gibberish-fixer/egaoncncehhikinjpadjfajabolopaeh?authuser=0&hl=iw
+
 
 > **Tip:** For quicker access, assign a keyboard shortcut (such as **Ctrl + G**) in Chrome’s extension keyboard shortcuts.
