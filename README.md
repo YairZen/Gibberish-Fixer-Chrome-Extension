@@ -33,7 +33,7 @@ Paste the text and get a clean result instantly.
 
 ---
 
-**Chrome Web Store**  
+## Chrome Web Store
 The extension is available on the Chrome Web Store:  
 https://chromewebstore.google.com/detail/gibberish-fixer/egaoncncehhikinjpadjfajabolopaeh?authuser=0&hl=iw
 
