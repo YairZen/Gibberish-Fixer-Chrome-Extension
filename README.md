@@ -9,20 +9,20 @@
   />
 </h1>
 
-
-
-
 A tiny Chrome extension that instantly fixes Hebrew ↔ English keyboard gibberish.  
 Built to remove a daily frustration with a single action.
 
 Typed with the wrong keyboard layout?  
 Paste the text and get a clean result instantly.
 
-<img width="480" alt="Extension preview" src="https://github.com/user-attachments/assets/8f699d57-5df1-4370-a99e-fcbb1b837ca8" />
+<div style="display:flex; gap:16px;">
+  <img src="https://github.com/user-attachments/assets/3821fa7a-577b-41c6-9099-f7fdeb869bd0" width="490" alt="before paste" />
+  <img src="https://github.com/user-attachments/assets/a5e929e7-6b06-4a97-b7a0-63197123eb93" width="490" alt="after paste" />
+</div>
 
 ## Usage
-1. Open the extension or press **Ctrl + G**
-2. Paste the text
+1. Open the extension
+2. Paste the text from clipboard
 3. Copy the fixed result
 
 ## Highlights
@@ -33,5 +33,7 @@ Paste the text and get a clean result instantly.
 ---
 
 **Chrome Web Store**  
-The extension has been submitted to the Chrome Web Store and is currently under review.  
-A public download link will be added once approved.
+The extension is available on the Chrome Web Store:  
+https://chromewebstore.google.com/detail/gibberish-fixer/egaoncncehhikinjpadjfajabolopaeh?authuser=0&hl=iw
+
+> **Tip:** For quicker access, assign a keyboard shortcut (such as **Ctrl + G**) in Chrome’s extension keyboard shortcuts.
