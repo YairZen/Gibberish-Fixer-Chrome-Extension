@@ -16,8 +16,8 @@ Typed with the wrong keyboard layout?
 Paste the text and get a clean result instantly.
 
 <div style="display:flex; gap:16px;">
-  <img width="453" height="301" alt="image" src="https://github.com/user-attachments/assets/c0a877e6-c0d9-47eb-9632-0a06be19b406" />
-  <img width="451" height="303" alt="image" src="https://github.com/user-attachments/assets/4c6f7c65-4d95-4d69-a921-29c6fd94bd47" />
+  <img width="400" height="301" alt="image" src="https://github.com/user-attachments/assets/c0a877e6-c0d9-47eb-9632-0a06be19b406" />
+  <img width="400" height="303" alt="image" src="https://github.com/user-attachments/assets/4c6f7c65-4d95-4d69-a921-29c6fd94bd47" />
 
 </div>
 
