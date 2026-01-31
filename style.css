@@ -64,7 +64,7 @@ body {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px; /* צמודות יותר כמו בגוגל */
+  gap: 6px;
 }
 
 .card {
@@ -102,10 +102,19 @@ textarea::placeholder {
 /* ===== Actions ===== */
 .actions {
   display: flex;
-  justify-content: flex-end;
+  gap: 8px;
   margin-top: 8px;
 }
 
+.input-card .actions {
+  justify-content: flex-start;
+}
+
+.output-card .actions {
+  justify-content: flex-end;
+}
+
+/* ===== Buttons ===== */
 button {
   padding: 7px 16px;
   border-radius: 999px;
@@ -124,3 +133,25 @@ button:hover {
 button:active {
   background: #174ea6;
 }
+
+/* Paste (secondary) */
+#pasteBtn {
+  background: #ffffff;
+  color: var(--muted);
+  border: 1px solid #dadce0;
+}
+
+#pasteBtn:hover {
+  background: #f8f9fa;
+}
+
+
+button:disabled {
+  background: #1a73e8;   /* אותו כחול */
+  opacity: 0.55;         /* ההבדל היחיד */
+  color: #ffffff;
+  cursor: default;
+  pointer-events: none;
+}
+
+

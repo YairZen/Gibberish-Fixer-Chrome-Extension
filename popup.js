@@ -11,40 +11,60 @@ const EN_TO_HE = Object.fromEntries(
 function guessMap(text) {
   let he = 0, en = 0;
   for (const c of text) {
-    if (c >= '\u0590' && c <= '\u05FF') he++;
+    if (c >= "\u0590" && c <= "\u05FF") he++;
     if (/[a-zA-Z]/.test(c)) en++;
   }
   return he > en ? HE_TO_EN : EN_TO_HE;
 }
 
-const input = document.getElementById("input");
-const output = document.getElementById("output");
-const copyBtn = document.getElementById("copyBtn");
-
-// Auto-focus on open (Google-like: zero friction)
-window.addEventListener("DOMContentLoaded", () => input.focus());
-
-input.addEventListener("input", e => {
-  const text = e.target.value;
-
+function convert(text) {
   const map = guessMap(text);
   let out = "";
   for (const c of text) out += map[c] || c;
+  return { out, map };
+}
 
-  output.value = out;
-  output.style.direction = (map === HE_TO_EN) ? "ltr" : "rtl";
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("input");
+  const output = document.getElementById("output");
+  const pasteBtn = document.getElementById("pasteBtn");
+  const copyBtn = document.getElementById("copyBtn");
 
-copyBtn.addEventListener("click", async () => {
-  await navigator.clipboard.writeText(output.value);
+  if (!input || !output || !pasteBtn || !copyBtn) return;
 
-  // tiny feedback
-  const old = copyBtn.textContent;
-  copyBtn.textContent = "Copied ✓";
-  setTimeout(() => (copyBtn.textContent = old), 900);
+  const updateCopyState = () => {
+    copyBtn.disabled = output.value.trim() === "";
+  };
 
-  // Clear on copy (optional behavior; you asked for it)
-  input.value = "";
-  output.value = "";
   input.focus();
+  updateCopyState();
+
+  input.addEventListener("input", () => {
+    const { out, map } = convert(input.value);
+    output.value = out;
+    output.style.direction = map === HE_TO_EN ? "ltr" : "rtl";
+    updateCopyState();
+  });
+
+  pasteBtn.addEventListener("click", async () => {
+    const text = await navigator.clipboard.readText();
+    if (!text) return;
+
+    input.value = text;
+    const { out, map } = convert(text);
+    output.value = out;
+    output.style.direction = map === HE_TO_EN ? "ltr" : "rtl";
+    updateCopyState();
+  });
+
+  copyBtn.addEventListener("click", async () => {
+    if (copyBtn.disabled) return;
+
+    await navigator.clipboard.writeText(output.value);
+
+    input.value = "";
+    output.value = "";
+    updateCopyState();
+    input.focus();
+  });
 });

@@ -9,23 +9,25 @@
 <body>
   <div class="container">
 
-    <!-- Top bar -->
     <div class="topbar">
       <div class="langline">
         <span class="active">עברית</span>
         <span class="arrow">⇄</span>
         <span>אנגלית</span>
       </div>
-
       <div class="chip">Auto · Gibberish Fix</div>
     </div>
 
-    <!-- Cards (בלי שום חץ באמצע) -->
     <div class="cards">
+      <!-- INPUT -->
       <div class="card input-card">
         <textarea id="input" placeholder="הדבק טקסט"></textarea>
+        <div class="actions">
+          <button id="pasteBtn">Paste</button>
+        </div>
       </div>
 
+      <!-- OUTPUT -->
       <div class="card output-card">
         <textarea id="output" readonly></textarea>
         <div class="actions">
