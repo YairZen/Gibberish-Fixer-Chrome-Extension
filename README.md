@@ -31,11 +31,11 @@ Paste the text and get a clean result instantly.
 - Clean, minimal UI
 - Fully client-side (no data collection)
 
----
-
 ## Chrome Web Store
 Available in Chrome Web Store:
+
 https://chromewebstore.google.com/detail/gibberish-fixer/egaoncncehhikinjpadjfajabolopaeh?authuser=0&hl=iw
 
+---
 
 > **Tip:** For quicker access, assign a keyboard shortcut (such as **Ctrl + G**) in Chrome’s extension keyboard shortcuts.
